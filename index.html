@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CATS</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #121212;
+        }
+        .image-container {
+            perspective: 1000px;
+        }
+        .image {
+            width: 500px;
+            height: 500px;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+        .image:hover {
+            transform: rotateY(180deg);
+        }
+        .front, .back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+        .front {
+            background-image: url('https://imgfz.com/i/fUBvguq.png');
+            background-size: cover;
+        }
+        .back {
+            background-image: url('https://imgfz.com/i/9WJUYHI.png');
+            background-size: cover;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <div class="image">
+            <div class="front"></div>
+            <div class="back"></div>
+        </div>
+    </div>
+</body>
+</html>
