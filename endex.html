@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Simple</title>
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet">
 </head>
 <body>
-    <video width="600" controls>
+    <video
+        id="my-video"
+        class="video-js"
+        controls
+        preload="auto"
+        width="600"
+        height="400"
+        data-setup="{}"
+    >
         <source src="xd.mp4" type="video/mp4">
         Tu navegador no soporta el elemento de video.
     </video>
+
+    <script src="xd.mp4"></script>
 </body>
 </html>
